@@ -36,6 +36,9 @@ def readfile():
         print 'totalWords: '
         print totalWords
         print fileNames
+        printFile = open('allWordsNovember.txt', 'w')
+        printFile.write(allWords)
+        printFile.close()
 
 
 readfile()

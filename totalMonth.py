@@ -23,9 +23,9 @@ def readfile():
                 allSentences = sentenceList
         for sentence in allSentences:
             wordList = sentence.split(' ')
-            print len(wordList)
+            ##print len(wordList)
             for word in wordList:
-                print word
+                ##print word
                 if word != ' ':
                     totalWords += 1
                     totalChars += len(word)
@@ -36,7 +36,7 @@ def readfile():
         print 'totalWords: '
         print totalWords
         print fileNames
-        printFile = open('allWordsNovember.txt', 'w')
+        printFile = open('../allWordsNov.txt', 'w')
         printFile.write(allWords)
         printFile.close()
 

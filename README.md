@@ -14,10 +14,10 @@ tells you how many words total
 ##Currently
 - This will run with 'python autoWrite.py' in Terminal
 - outputs number of words after quitting file
+- does give overall word count for the month
 
 ##Does Not
-- write a file of all the words
-- Does not give overall word count
+- Does no make a file of everything written yet
 - does not open text files of what you have written, for copying
 
 write one file, rewrites two new files and gives you word counts

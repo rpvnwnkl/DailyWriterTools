@@ -20,6 +20,7 @@ Python tools for writing
 - Compiles all month's words in single file for you
 
 ##Does Not
-- does not open text files of what you have written, for copying
+- Opens text files of what you have written, for the day and for the month, for copying
+- Catch any errors: not sure what would happen if there were other files in directory
 
 write one file, rewrites two new files and gives you word counts

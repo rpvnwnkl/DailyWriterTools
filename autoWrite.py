@@ -55,6 +55,7 @@ print str(countWords(cleanFile(fileNamePath)))+' words for the day. \n So far...
 
 fileNames = []
 for fileEntry in os.listdir('./'+dirPath):
+##goes through each entry in directory
     fileNames.append(fileEntry)
 fileNames.sort()
 ##creates a list of the fileNames in the month's directory
@@ -66,10 +67,16 @@ numWords = 0
 allWords = []
 for name in fileNames:
     wordsList = cleanFile('./'+dirPath+'/'+name)
+    ##Makes wordsList from each entry in directory
     allWords += wordsList
+    ##Adds words to overall wordsList
     numWords += countWords(wordsList)
+    ##Adds number of words to overall wordcount
+
 monthWords = open('allWords'+dirPath+'.txt', 'w')
+##Opens new file for writing allWords
 monthWords.write(' '.join(allWords))
+##Writes allWords, using space as delimiter for list entries
 monthWords.close()
 
 print 'and '+str(numWords)+' words for the month. \n So far.......\n'

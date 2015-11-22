@@ -22,5 +22,11 @@ Python tools for writing
 ##Does Not
 - Opens text files of what you have written, for the day and for the month, for copying
 - Catch any errors: not sure what would happen if there were other files in directory
+- Cypher words so the text is unreadable to most people with computer help
+- Upload to 750 and NaNoWriMo at EOD or on demand
+
+##Problems
+- Determine why gedit can't open allWords file
+
 
 write one file, rewrites two new files and gives you word counts

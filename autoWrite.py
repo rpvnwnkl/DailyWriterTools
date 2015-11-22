@@ -34,6 +34,7 @@ def cleanFile(fileNamePath):
     todaysNoPunct = todaysString.translate(None, string.punctuation)
     todaysWords = todaysNoPunct.split(' ')
     ##now we have a list of single words from the days writing
+    todaysFile.close()
     return todaysWords
 
 def countWords(todaysWordList):

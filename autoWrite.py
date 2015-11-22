@@ -50,8 +50,8 @@ def countWords(todaysWordList):
             pass
     return wordCount
 
-print 'OK, Here Is The Report:\n\n'
-print str(countWords(cleanFile(fileNamePath)))+' words for the day. \n So far.... \n\n'
+print 'OK, Here Is The Report:\n'
+print str(countWords(cleanFile(fileNamePath)))+' words for the day. \n So far.... \n'
 
 fileNames = []
 for fileEntry in os.listdir('./'+dirPath):
@@ -63,9 +63,15 @@ print 'Here are the files so far in the month of '+dirPath+': \
     
 
 numWords = 0
+allWords = []
 for name in fileNames:
     wordsList = cleanFile('./'+dirPath+'/'+name)
+    allWords += wordsList
     numWords += countWords(wordsList)
+monthWords = open('allWords'+dirPath+'.txt', 'w')
+monthWords.write(' '.join(allWords))
+monthWords.close()
+
 print 'and '+str(numWords)+' words for the month. \n So far.......\n'
 ##Opens each file in fileNames list and counts the words thereh
 

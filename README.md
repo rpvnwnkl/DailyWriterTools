@@ -27,6 +27,9 @@ Python tools for writing
 
 ##Problems
 - Determine why gedit can't open allWords file
+- Word counter is probably inaccurate, has not been tested
+- - Design a unit test
+- - Think about hyphenated words and how to handle nested punctuation
 
 
 write one file, rewrites two new files and gives you word counts

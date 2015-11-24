@@ -57,6 +57,13 @@ print str(countWords(cleanFile(fileNamePath)))+' words for the day. \n So far...
 fileNames = []
 for fileEntry in os.listdir('./'+dirPath):
 ##goes through each entry in directory
+
+    ## At this point there should be a check for
+    ## the file's authenticity and relevance to
+    ## this count. Probably could convert fileName
+    ## back to time format and then verify it is 
+    ## today or earlier in the month
+
     fileNames.append(fileEntry)
 fileNames.sort()
 ##creates a list of the fileNames in the month's directory
@@ -66,18 +73,18 @@ print 'Here are the files so far in the month of '+dirPath+': \
 
 numWords = 0
 allWords = []
+monthWords = open('allwords'+dirPath+'.txt', 'w')
 for name in fileNames:
+    theFile = open('./'+dirPath+'/'+name, 'rb')
+    theLines = theFile.read()
+    for line in theLines:
+        monthWords.write(line)
+
     wordsList = cleanFile('./'+dirPath+'/'+name)
     ##Makes wordsList from each entry in directory
-    allWords += wordsList
-    ##Adds words to overall wordsList
     numWords += countWords(wordsList)
     ##Adds number of words to overall wordcount
 
-monthWords = open('allWords'+dirPath+'.txt', 'w')
-##Opens new file for writing allWords
-monthWords.write(' '.join(allWords))
-##Writes allWords, using space as delimiter for list entries
 monthWords.close()
 
 print 'and '+str(numWords)+' words for the month. \n So far.......\n'

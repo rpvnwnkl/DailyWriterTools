@@ -24,12 +24,23 @@ Python tools for writing
 - Catch any errors: not sure what would happen if there were other files in directory
 - Cypher words so the text is unreadable to most people with computer help
 - Upload to 750 and NaNoWriMo at EOD or on demand
+- Format writing for clean paragraphs and sentence endings 
+- Accomodate markdown
+- check spelling
+- count typing speed
+
 
 ##Problems
 - Determine why gedit can't open allWords file
 - Word counter is probably inaccurate, has not been tested
 - - Design a unit test
 - - Think about hyphenated words and how to handle nested punctuation
+- Not sure how to read live typing into active python process while maintaining user experience
+- - Possibly the readline module can help with this
+- - Might involve implementing a gui with qt or tinker
 
+##Solved
+- Determine why gedit can't open allWords file
+ -- This was because the allWords file was being saved as a giant list of all the letters, not a string of all the lines combined. Currently it seems to work, printing pretty much as it's read/written by user
 
 write one file, rewrites two new files and gives you word counts
